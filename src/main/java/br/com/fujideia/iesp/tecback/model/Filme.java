@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Setter
 @Entity
 @Table(name = "tb_filme")
-public class Filme implements Serializable {
+public class Filme {
 
     @Id
     @GeneratedValue
@@ -20,8 +20,5 @@ public class Filme implements Serializable {
     @Column(name = "ds_sinopse", length = 500)
     private String sinopse;
 
-    @ManyToOne
-    @JoinColumn(name = "genero_id")
-    private Genero genero;
 
 }
